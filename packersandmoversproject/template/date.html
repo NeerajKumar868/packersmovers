@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input id="whatsapp_date" type="date" class="form-control">
+    <button id="submitForm">Submit</button>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+       $("#submitForm").click(function() {
+        var date=document.getElementById("whatsapp_date").value;
+          alert(date);
+       });
+    </script>
+    
+</body>
+</html>

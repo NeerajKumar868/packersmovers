@@ -1,0 +1,802 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-xxl py-5 bg-dark hero-header mb-2">
+    <div class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="text-light fs-3">Safe, Secure & <br>Affordable
+                    Shifting</h1>
+            
+                <p class="text-white mb-4 pb-2">If you are planning to move to a new
+                    location, packing and moving can be a daunting task, especially if you have a lot of
+                    belongings. However, you can make the process stress-free and easier by hiring a
+                    professional packer and mover</p>
+                <a href="" class="btn btn-color">Get visiting card</a>
+                <!-- <a href="" class="btn btn-primary ">Get Free Quote Now</a> -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    whatsapp enquiry
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-6" id="exampleModalLabel">Get Free Enquiry on whatsapp</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <form>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="whatsapp_from"
+                                                        placeholder="Moving Form" required>
+                                                    <label for="from">Moving From</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="whatsapp_to"
+                                                        placeholder="Moving To" required>
+                                                    <label for="to">Moving To</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating date" id="whatsapp_date"
+                                                    data-target-input="nearest">
+
+                                                    <input id="whatsapp_date" type="date" class="form-control">
+
+                                                    <label for="whatsapp_date">Date & Time</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="whatsapp_select" required>
+                                                        <option value="1">Choose</option>
+                                                        <option value="1 BHK">1 BHK</option>
+                                                        <option value="2 BHK">2 BHK</option>
+                                                        <option value="3 BHK">3 BHK</option>
+                                                    </select>
+                                                    <label for="select1">Select Moving Size</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="whatsapp_name"
+                                                        placeholder="Full Name" required>
+                                                    <label for="Full Name">Full Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="whatsapp_number"
+                                                        placeholder="Mobile Number" required>
+                                                    <label for="number">Mobile Number</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary w-100 py-2" type="button"
+                                                    onclick="whatsapp();">Get Free Moving Quote
+                                                    Now</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                <img class="img-fluid" src="{% static 'img/packers.webp'%}" alt="packers.webp" width="700" height="700">
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Service Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-item rounded pt-3 shadow">
+                    <div class="p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-gear-fill color mb-4" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        </svg>
+                        <h6>Affordable Services</h6>
+                        <p>Our Packer & Mover Services Offer Affordable Options to Make Your Move Stress-Free
+                            and Budget Friendly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-item rounded pt-3 shadow">
+                    <div class="p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-square color mb-4" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                        </svg>
+                        <h6>Our Specialists</h6>
+                        <p> Our packer & mover services are tailored to meet your unique needs & stress-free
+                            moving experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-item rounded pt-3 shadow">
+                    <div class="p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-truck color mb-4" viewBox="0 0 16 16">
+                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                          </svg>
+                        <h6>Full Moving Service</h6>
+                        <p>Our full moving service includes packing, loading, transportation, unloading,
+                            & unpacking. enjoy it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-item rounded pt-3 shadow">
+                    <div class="p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-headset color mb-4"  viewBox="0 0 16 16">
+                            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                        </svg>
+                      
+                        <h6>24/7 Full Support</h6>
+                        <p>We understand that moving can be time-sensitive. That's why our 24/7 support line are available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Service 1 Start -->
+<div class="container-xxl pt-5 pb-3">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="mb-5 fs-2 fw-light" style="text-shadow: 1px 1px 2px #000000;">Services We Provide</h1>
+        </div>
+        <div class="row g-4 mb-2">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/Packing-And-Moving.webp' %}" class="card-img-top img-fluid"
+                                alt="Packing-And-Moving.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Packing and Moving</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/household-shifting-service.webp' %}" class="card-img-top img-fluid"
+                                alt="household-shifting-service.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Household Shifting</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/office-relocation.webp' %}" class="card-img-top img-fluid"
+                                alt="office-relocation.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Office Relocation</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-2">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/Packing-Unpacking-Services.webp' %}" class="card-img-top img-fluid"
+                                alt="Packing-Unpacking-Services.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Packing and Unpacking</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/commercial-relocation.webp' %}" class="card-img-top img-fluid"
+                                alt="commercial-relocation.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Commercial Relocation</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/loading-unloading-services.webp' %}" class="card-img-top img-fluid"
+                                alt="loading-unloading-services.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Loading and Unloading</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-2">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/domestic-internation-service.webp' %}" class="card-img-top img-fluid"
+                                alt="domestic-internation-service.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Domestic & International Moving</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/car-service.webp' %}" class="card-img-top img-fluid"
+                                alt="car-service.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Car Transportation</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <div class="card">
+                            <img src="{% static 'img/bike-transport-services.webp' %}" class="card-img-top img-fluid"
+                                alt="bike-transport-services.webp" width="600" height="400">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Bike Transportation</h5>
+                                <p class="card-text" >Some quick example text to build on the card title and make
+                                    up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--service 1 End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6 text-start">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/img1.webp' %}" alt="img1.webp" width="500" height="663" >
+                    </div>
+                    <div class="col-6 text-start">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="{% static 'img/img2.webp' %}"
+                            style="margin-top: 25%;" alt="img2.wepb" width="500" height="663" >
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s"
+                            src="{% static 'img/img4.webp' %}" alt="img4.webp" width="500" height="663">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s"
+                            src="{% static 'img/img18.webp' %}" alt="img18.webp" width="500" height="663">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="section-title  text-start fw-normal color">About</h5>
+                <h3 class="mb-4 fw-light" style="text-shadow: 1px 1px 2px #000000;">Shri Siddhivinayak Packers & Movers</h3>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                    diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                    diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
+                    dolore erat amet</p>
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                            <h1 class="flex-shrink-0 display-5 mb-0 fs-1 color ">10 +</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Years of</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Experience</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                            <h1 class="flex-shrink-0 display-5 mb-0 fs-1 color">10 +</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Dedicated</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Team</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                            <h1 class="flex-shrink-0 display-5 mb-0 fs-1 color">40 +</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Tons</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Moved</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                            <h1 class="flex-shrink-0 display-5 mb-0 fs-3 color">1000 +</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Satisfied</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Customers</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-color py-3 px-5 mt-2" href="about.html">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!--Estimate  Start -->
+<div class="container-xxl py-5 px-0">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <img src="{% static 'img/estimate.webp' %}" alt="estimate.webp" class="img-fluid" width="800" height="525">
+        </div>
+        <div class="col-md-6 bg-dark d-flex align-items-center">
+            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+
+                <h1 class="text-white mb-3 fs-2 fw-light">Get a Free Quote/Estimate</h1>
+                <form >
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="from" placeholder="Moving Form" required>
+                                <label for="from">Moving From</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="to" placeholder="Moving To" required>
+                                <label for="to">Moving To</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating date" id="date3" data-target-input="nearest">
+                                <input type="text" class="form-control datepicker-input" id="datetime"
+                                    placeholder="Date & Time" data-target="#date3"
+                                    data-toggle="datetimepicker" required />
+                                <label for="datetime">Date & Time</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="select1" required>
+                                    <option value="1">Choose</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                </select>
+                                <label for="select1">Select Moving Size</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                                <label for="Full Name">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="number" placeholder="Mobile Number" required>
+                                <label for="number">Mobile Number</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-color w-100 py-2" type="submit">Get Free Moving Quote
+                                Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Estimate Start -->
+
+
+<!-- Branch Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <p>All Over India</p>
+            <h1 class="mb-5 fs-2 fw-light" style="text-shadow: 1px 1px 2px #000000;">Our Branches</h1>
+        </div>
+        <div class="tab-class text-center">
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/Mumbai.webp' %}" alt="Mumbai.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Mumbai</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/pune.webp' %}" alt="pune.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Pune</span>
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/nagpur.webp' %}" alt="nagpur.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Nagpur</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/delhi.webp' %}" alt="delhi.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Delhi</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-3">
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/noida.webp' %}" alt="noida.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Noida</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/gurgaon.webp' %}" alt="gurgaon.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Gurgaon</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/faridabad.webp' %}" alt="faridabad.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Faridabad</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/ghaziabad.webp' %}" alt="ghaziabad.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Ghaziabad</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-3">
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/varanai.webp' %}" alt="varanai.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Varanasi</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/lucknow.webp' %}" alt="lucknow.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Lucknow</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/hyderabad.webp' %}" alt="hyderabad.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Hyderabad</span>
+
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/chennai.webp' %}" alt="chennai.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Chennai</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/bangalore.webp' %}" alt="bangalore.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>Bangalore</span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="{% static 'img/chennai.webp' %}" alt="chennai.webp" width="80" height="80">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2" style="text-shadow: 0.5px 0.5px 1px #000000; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                                        <span>All Over India </span>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Branch End -->
+
+
+
+<!-- Work Gellery Start -->
+<div class="container-xxl pt-5 pb-3">
+    <div class="container">
+        <div class="text-center">
+
+            <h1 class="mb-5 fs-2 fw-light " style="text-shadow: 1px 1px 2px #000000;">Our Work Gallery</h1>
+        </div>
+        <div class="row g-4 mb-2">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img1.webp' %}" alt="img1.webp" width="500" height="666">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.3s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img2.webp' %}" alt="img2.webp" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.5s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img9.webp' %}" alt="img9.webp" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.7s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img4.webp' %}" alt="img4.webp" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img11.webp' %}" alt="img11.wepb" width="500" height="666">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.3s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img6.webp' %}" alt="img6.wepb" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.5s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img12.webp' %}" alt="img12.wepb" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-wow-delay="0.7s">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid img-thumbnail" src="{% static 'img/img8.webp' %} " alt="img8.wepb" width="500" height="666">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Work Gellery End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="mb-5 fs-2 fw-light"  style="text-shadow: 1px 1px 2px #000000;">Our Happy Customers!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                    diam</p>
+                <div class="d-flex align-items-center">
+
+                    <div class="ps-3">
+                        <h5 class="mb-1">Neeraj Sharma</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                    diam</p>
+                <div class="d-flex align-items-center">
+
+                    <div class="ps-3">
+                        <h5 class="mb-1">Rajendra Singh</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                    diam</p>
+                <div class="d-flex align-items-center">
+
+                    <div class="ps-3">
+                        <h5 class="mb-1">Avinash Patil</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
+                    diam</p>
+                <div class="d-flex align-items-center">
+
+                    <div class="ps-3">
+                        <h5 class="mb-1">Arun Kumar</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+{% endblock %}
